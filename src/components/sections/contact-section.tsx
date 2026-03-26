@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 import { useReveal } from "@/hooks/use-reveal"
 import { useState, type FormEvent } from "react"
 import { MagneticButton } from "@/components/magnetic-button"
@@ -68,11 +68,25 @@ export function ContactSection() {
                 </p>
               </a>
 
+              <a
+                href="tel:+79644339415"
+                className={`group block transition-all duration-700 ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+                }`}
+                style={{ transitionDelay: "350ms" }}
+              >
+                <div className="mb-1 flex items-center gap-2">
+                  <Phone className="h-3 w-3 text-foreground/60" />
+                  <span className="font-mono text-xs text-foreground/60">Телефон</span>
+                </div>
+                <p className="text-base text-foreground transition-colors group-hover:text-foreground/70 md:text-2xl">+7 964 433 94 15</p>
+              </a>
+
               <div
                 className={`transition-all duration-700 ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
                 }`}
-                style={{ transitionDelay: "350ms" }}
+                style={{ transitionDelay: "450ms" }}
               >
                 <div className="mb-1 flex items-center gap-2">
                   <MapPin className="h-3 w-3 text-foreground/60" />
